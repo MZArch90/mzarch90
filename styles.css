@@ -166,3 +166,26 @@ url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fi
   .footer-grid{grid-template-columns:1fr;gap:28px}
   .copyright{align-self:auto}
 }
+.language-switcher{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-left:24px;
+}
+
+.language-switcher a{
+    text-decoration:none;
+    color:#777;
+    font-size:12px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.language-switcher a:hover{
+    color:#000;
+}
+
+.language-switcher a.active{
+    color:var(--red);
+}
+}
