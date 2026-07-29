@@ -20,5 +20,5 @@ document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('contact-form').addEventListener('submit', event => {
   event.preventDefault();
   document.getElementById('form-note').textContent =
-    'Спасибо! Это демонстрационная форма. На следующем этапе подключим отправку заявок.';
+    'Təşəkkür edirik! Bu, nümayiş formasıdır. Növbəti mərhələdə sorğuların göndərilməsini aktivləşdirəcəyik.';
 });
