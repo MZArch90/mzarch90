@@ -1,17 +1,18 @@
-const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('.site-nav');
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".site-nav");
 
-menuButton.addEventListener('click', () => {
-  const open = navigation.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(open));
-  document.body.style.overflow = open ? 'hidden' : '';
+menuButton.addEventListener("click", () => {
+  const open = navigation.classList.toggle("is-open");
+
+  menuButton.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("menu-open", open);
 });
 
-navigation.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navigation.classList.remove('open');
-    menuButton.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+navigation.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navigation.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
   });
 });
 
