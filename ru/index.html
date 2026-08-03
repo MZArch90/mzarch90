@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MZArch — архитектура, дизайн интерьера, градостроительство и авторский надзор.">
   <title>MZArch — Architecture Studio</title>
@@ -13,11 +14,11 @@
 <body>
   <header class="site-header" id="top">
     <a class="brand" href="#home">
-      <img src="../assets/images/logo.png" alt="Логотип MZArch" class="logo">
+      <img src="../assets/images/logo.png" alt="MZArch Logo" class="logo">
     </a>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
-      <span></span><span></span>
+      <span></span>
     </button>
 
     <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
@@ -27,8 +28,15 @@
       <a href="#about">Обо мне</a>
       <a href="#contact">Контакты</a>
       <a class="nav-cta" href="#contact">Обсудить проект</a>
+
+      <div class="mobile-language-switcher" aria-label="Выбор языка">
+        <a href="../">AZ</a>
+        <a href="../en/">EN</a>
+        <a class="active" href="./">RU</a>
+      </div>
     </nav>
-    <div class="language-switcher" aria-label="Выбор языка">
+
+    <div class="desktop-language-switcher" aria-label="Выбор языка">
       <a href="../">AZ</a>
       <a href="../en/">EN</a>
       <a class="active" href="./">RU</a>
@@ -247,6 +255,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
