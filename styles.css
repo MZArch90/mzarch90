@@ -335,3 +335,106 @@ url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fi
     font-size: 14px;
   }
 }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.about-content {
+  padding: 20px 0;
+}
+
+.about-content h2 {
+  margin-bottom: 32px;
+}
+
+.about-content h2 em {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.42em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #777;
+}
+
+.about-content p {
+  max-width: 720px;
+  margin-bottom: 22px;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-content .about-lead {
+  color: #111;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.about-content blockquote {
+  margin: 40px 0;
+  padding: 28px 0 28px 28px;
+  border-left: 3px solid var(--red);
+  color: #111;
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.about-photo {
+  position: sticky;
+  top: 110px;
+  overflow: hidden;
+  min-height: 620px;
+  background: #f2f2f2;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-photo {
+    position: static;
+    min-height: 500px;
+  }
+
+  .about-photo img {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-content p {
+    font-size: 16px;
+  }
+
+  .about-content .about-lead {
+    font-size: 18px;
+  }
+
+  .about-content blockquote {
+    margin: 32px 0;
+    padding-left: 20px;
+    font-size: 21px;
+  }
+
+  .about-photo,
+  .about-photo img {
+    min-height: 420px;
+  }
+}
