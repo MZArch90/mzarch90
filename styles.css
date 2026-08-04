@@ -80,7 +80,6 @@ url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fi
 .service-list b{font-weight:400}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;min-height:650px}
 .about-photo{background:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=88") center/cover}
-.about-content{background:var(--soft);padding:9vw 7vw;display:flex;flex-direction:column;justify-content:center}
 .about-content h2 em{font-size:.46em;display:block;margin-top:18px;letter-spacing:-.01em}
 .about-content p{color:#565656;max-width:580px}
 .about-content .button{align-self:flex-start;margin-top:18px}
@@ -338,51 +337,59 @@ url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fi
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 70px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 90px;
   align-items: start;
 }
 
 .about-content {
-  padding: 20px 0;
+  padding: 10px 0 40px;
+  background: transparent;
+}
+
+.about-content .eyebrow {
+  margin-bottom: 24px;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .about-content h2 {
-  margin-bottom: 32px;
+  margin: 0 0 38px;
+  color: #111;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -0.045em;
 }
 
 .about-content h2 em {
   display: block;
-  margin-top: 10px;
-  font-size: 0.42em;
+  margin-top: 16px;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.4;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.03em;
-  color: #777;
 }
 
 .about-content p {
-  max-width: 720px;
-  margin-bottom: 22px;
-  color: #555;
+  max-width: 680px;
+  margin: 0 0 26px;
+  color: #3f3f3f;
   font-size: 17px;
-  line-height: 1.75;
+  line-height: 1.85;
 }
 
 .about-content .about-lead {
+  margin-bottom: 32px;
   color: #111;
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.about-content blockquote {
-  margin: 40px 0;
-  padding: 28px 0 28px 28px;
-  border-left: 3px solid var(--red);
-  color: #111;
-  font-size: 24px;
-  line-height: 1.45;
-  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.55;
+  font-weight: 400;
 }
 
 .about-photo {
@@ -427,14 +434,434 @@ url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fi
     font-size: 18px;
   }
 
-  .about-content blockquote {
-    margin: 32px 0;
-    padding-left: 20px;
-    font-size: 21px;
+  .about-photo,
+  .about-photo img {
+    min-height: 420px;
+  }
+}
+
+/* ABOUT — PREMIUM LAYOUT */
+
+.about {
+  background: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  gap: clamp(70px, 8vw, 130px);
+  align-items: start;
+}
+
+.about-content {
+  max-width: 760px;
+  padding: 12px 0 70px;
+  background: transparent;
+}
+
+.about-content .eyebrow {
+  margin: 0 0 26px;
+  color: var(--red);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.about-content h2 {
+  margin: 0;
+  color: #111;
+  font-size: clamp(46px, 5.4vw, 78px);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+
+.about-role {
+  margin: 20px 0 46px !important;
+  color: #777 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.025em;
+}
+
+.about-role span {
+  margin: 0 8px;
+  color: var(--red);
+}
+
+.about-content p {
+  max-width: 720px;
+  margin: 0 0 28px;
+  color: #3c3c3c;
+  font-size: 18px;
+  line-height: 1.95;
+}
+
+.about-content .about-lead {
+  margin-bottom: 34px;
+  color: #111;
+  font-size: clamp(21px, 2vw, 25px);
+  line-height: 1.58;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.about-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 52px;
+  padding-top: 24px;
+  border-top: 1px solid #dedede;
+}
+
+.about-signature strong {
+  color: #111;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+}
+
+.about-signature span {
+  color: #777;
+  font-size: 14px;
+}
+
+.about-photo {
+  position: sticky;
+  top: 105px;
+  min-height: 720px;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 720px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.about-photo:hover img {
+  transform: scale(1.025);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-content {
+    max-width: none;
+    padding-bottom: 0;
+  }
+
+  .about-photo {
+    position: static;
+    min-height: 560px;
+  }
+
+  .about-photo img {
+    min-height: 560px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-content .eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 46px;
+  }
+
+  .about-role {
+    margin: 16px 0 34px !important;
+    font-size: 14px !important;
+  }
+
+  .about-role span {
+    margin: 0 4px;
+  }
+
+  .about-content p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .about-content .about-lead {
+    font-size: 20px;
   }
 
   .about-photo,
   .about-photo img {
-    min-height: 420px;
+    min-height: 450px;
+  }
+}
+
+/* ABOUT STATEMENT */
+
+.about-statement {
+  max-width: 720px;
+  margin: 64px 0 34px;
+  padding: 26px 0 22px;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.about-statement p {
+  margin: 0;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 2.6vw, 35px);
+  line-height: 1.28;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.about-statement span {
+  display: block;
+  margin-top: 20px;
+  color: #555;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .about-statement {
+    margin: 46px 0 30px;
+    padding: 22px 0 18px;
+  }
+
+  .about-statement p {
+    font-size: 22px;
+    line-height: 1.35;
+  }
+
+  .about-statement span {
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+}
+
+.contact-details {
+  display: grid;
+  gap: 18px;
+  margin-top: 32px;
+  max-width: 390px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 13px 0;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+a.contact-item:hover {
+  color: var(--red);
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: var(--red);
+  font-size: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+}
+
+.contact-item small {
+  display: block;
+  margin-bottom: 4px;
+  color: #777;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-item strong {
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.contact-location {
+  cursor: default;
+}
+
+@media (max-width: 600px) {
+  .contact-details {
+    margin-top: 26px;
+  }
+
+  .contact-item {
+    grid-template-columns: 32px 1fr;
+  }
+
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+
+/* CONTACTS — APPLE STYLE */
+
+.apple-contacts {
+  width: 100%;
+  max-width: 430px;
+  margin-top: 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.apple-contact {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  min-height: 76px;
+  padding: 16px 0;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+a.apple-contact:hover {
+  color: var(--red);
+  transform: translateX(4px);
+  border-color: rgba(227, 27, 35, 0.45);
+}
+
+.apple-contact svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.apple-contact small {
+  display: block;
+  margin-bottom: 5px;
+  color: #777;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.apple-contact strong {
+  color: inherit;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.contact-arrow {
+  color: #777;
+  font-size: 17px;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+a.apple-contact:hover .contact-arrow {
+  color: var(--red);
+  transform: translate(2px, -2px);
+}
+
+.apple-location {
+  cursor: default;
+}
+
+.whatsapp-button {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+  max-width: 430px;
+  margin-top: 28px;
+  padding: 18px 20px;
+  color: #fff;
+  background: var(--red);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--red);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.whatsapp-button:hover {
+  color: var(--red);
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+.whatsapp-button svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 600px) {
+  .apple-contacts {
+    margin-top: 30px;
+  }
+
+  .apple-contact {
+    min-height: 68px;
+    grid-template-columns: 24px 1fr auto;
+    gap: 13px;
+  }
+
+  .apple-contact svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .apple-contact strong {
+    font-size: 14px;
+  }
+
+  .whatsapp-button {
+    padding: 16px 17px;
+    font-size: 13px;
   }
 }
